@@ -1,12 +1,12 @@
 import {Produto} from "./produtos.js"
 
-class Pedido {
+export default class Pedido {
     constructor(numeroPedido, dataPedido, estaPago, listaProdutos, nomeCliente) {
-        this.numeroPedido;
+        this.numeroPedido = numeroPedido;
         this.dataPedido = new Date().toLocaleDateString();
         this.estaPago = false;
         this.listaProdutos = [];
-        this.nomeCliente;
+        this.nomeCliente = nomeCliente;
     }
 
     adicionarProduto(produto) {
