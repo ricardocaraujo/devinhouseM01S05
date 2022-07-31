@@ -14,4 +14,10 @@ class Pedido {
             this.listaProdutos.push(produto)
         }
     }
+
+    calcularTotal() {
+        this.listaProdutos.map(produto => {
+            return produto.preco * produto.quantidade;
+        })
+    }
 }
