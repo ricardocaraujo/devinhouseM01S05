@@ -1,3 +1,5 @@
+import {Produto} from "./produtos.js"
+
 class Pedido {
     constructor(numeroPedido, dataPedido, estaPago, listaProdutos, nomeCliente) {
         this.numeroPedido;
@@ -5,5 +7,11 @@ class Pedido {
         this.estaPago = false;
         this.listaProdutos = [];
         this.nomeCliente;
+    }
+
+    adicionarProduto(produto) {
+        if(produto instanceof Produto) {
+            this.listaProdutos.push(produto)
+        }
     }
 }
